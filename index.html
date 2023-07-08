@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+    <title>Splitter | Frontend Mentor Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="logo__container">
+        <img src="./images/logo.svg" alt="Splitter Logo" />
+      </div>
+      <div id="tip__container">
+        <div class="left__input__container">
+          <div class="bill__amount__container">
+            <label for="bill__amount">Bill</label>
+            <div class="bill__amount__input">
+              <div class="dollar__icon__container">
+                <img src="./images/icon-dollar.svg" alt="" />
+              </div>
+              <input
+                type="number"
+                name="bill__amount"
+                id="bill__amount"
+                placeholder="0" />
+            </div>
+          </div>
+          <div class="tip__percentage__container">
+            <label for="tip__percentage">Select Tip %</label>
+            <div class="tip__percentage__btns">
+              <button>5%</button>
+              <button>10%</button>
+              <button>15%</button>
+              <button>25%</button>
+              <button>50%</button>
+              <input type="number" placeholder="Custom" />
+            </div>
+          </div>
+          <div class="number__people__container">
+            <label for="number__of__people">Number of People</label>
+            <div class="number__people__input">
+              <div class="person__icon__container">
+                <img src="./images/icon-person.svg" alt="" />
+              </div>
+              <input
+                type="number"
+                name="number__of__people"
+                id="number__of__people"
+                placeholder="0" />
+            </div>
+          </div>
+        </div>
+        <div class="right__display__container">
+          <div class="tip__result tip__amount__container">
+            <div class="tip__result__text">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <div class="result__amount tip__amount">
+              <span>$</span>
+              <span class="person__tip__amount">4.27</span>
+            </div>
+          </div>
+          <div class="tip__result total__person__container">
+            <div class="tip__result__text">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <div class="result__amount total__amount">
+              <span>$</span>
+              <span class="person__total__amount">32.79</span>
+            </div>
+          </div>
+          <button class="reset__btn">Reset</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
