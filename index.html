@@ -17,6 +17,7 @@
         <img src="./images/logo.svg" alt="Splitter Logo" />
       </div>
       <div id="tip__container">
+        <!-- LEFT CONTAINER -->
         <div class="left__input__container">
           <div class="bill__amount__container">
             <label for="bill__amount">Bill</label>
@@ -28,22 +29,26 @@
                 type="number"
                 name="bill__amount"
                 id="bill__amount"
+                class="bill__amount"
                 placeholder="0" />
             </div>
           </div>
           <div class="tip__percentage__container">
             <label for="tip__percentage">Select Tip %</label>
             <div class="tip__percentage__btns">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
-              <input type="number" placeholder="Custom" />
+              <button class="tip__buttons">5%</button>
+              <button class="tip__buttons">10%</button>
+              <button class="tip__buttons active__tip__btn">15%</button>
+              <button class="tip__buttons">25%</button>
+              <button class="tip__buttons">50%</button>
+              <input type="number" id="custom__tip" placeholder="Custom" />
             </div>
           </div>
           <div class="number__people__container">
-            <label for="number__of__people">Number of People</label>
+            <div class="people__value__label">
+              <label for="number__of__people">Number of People</label>
+              <p class="value__error">Can't be zero</p>
+            </div>
             <div class="number__people__input">
               <div class="person__icon__container">
                 <img src="./images/icon-person.svg" alt="" />
@@ -52,10 +57,13 @@
                 type="number"
                 name="number__of__people"
                 id="number__of__people"
+                class="number__of__people"
                 placeholder="0" />
             </div>
           </div>
         </div>
+
+        <!-- RIGHT CONTAINER -->
         <div class="right__display__container">
           <div class="tip__result tip__amount__container">
             <div class="tip__result__text">
@@ -82,6 +90,6 @@
       </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

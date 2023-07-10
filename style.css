@@ -106,11 +106,6 @@ label {
   cursor: pointer;
 }
 
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {
-  display: none;
-}
-
 .tip__percentage__btns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -118,7 +113,7 @@ input::-webkit-outer-spin-button {
   margin-top: 8px;
 }
 
-.tip__percentage__btns > button {
+.tip__buttons {
   border: none;
   background-color: var(--Very-dark-cyan);
   color: var(--White);
@@ -126,6 +121,12 @@ input::-webkit-outer-spin-button {
   padding: 8px 20px;
   font-size: 18px;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.active__tip__btn {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
 }
 
 .tip__percentage__btns > input {
@@ -142,6 +143,18 @@ input::-webkit-outer-spin-button {
 
 .tip__percentage__btns > input::placeholder {
   color: var(--Grayish-cyan);
+}
+
+.people__value__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value__error {
+  font-size: 12px;
+  color: red;
+  display: none;
 }
 
 .right__display__container {
@@ -188,4 +201,13 @@ input::-webkit-outer-spin-button {
   color: var(--Very-dark-cyan);
   cursor: pointer;
   margin-top: auto;
+}
+
+@media screen and (max-width: 600px) {
+  #tip__container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
