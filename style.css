@@ -105,6 +105,16 @@ label {
   cursor: pointer;
 }
 
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
 .tip__percentage__btns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

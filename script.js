@@ -16,8 +16,8 @@ tipButtons.forEach((btn) => {
 });
 resetButton.addEventListener("click", resetFunc);
 
-billAmount.value = "0";
-numberOfPeople.value = "1";
+// billAmount.value = "0";
+// numberOfPeople.value = "1";
 tipAmountPerPerson.innerHTML = (0.0).toFixed(2);
 personTotalAmount.innerHTML = (0.0).toFixed(2);
 
@@ -69,15 +69,20 @@ function calculateTip() {
     let tipAmount = (billValue * tipValue) / peopleValue;
     let totalPerPerson = (billValue + tipAmount) / peopleValue;
 
-    tipAmountPerPerson.innerHTML = tipAmount.toFixed(2);
-    personTotalAmount.innerHTML = totalPerPerson.toFixed(2);
+    if (billAmount.value === "" || numberOfPeople.value === "") {
+      tipAmountPerPerson.innerHTML = "0.00";
+      personTotalAmount.innerHTML = "0.00";
+    } else {
+      tipAmountPerPerson.innerHTML = tipAmount.toFixed(2);
+      personTotalAmount.innerHTML = totalPerPerson.toFixed(2);
+    }
   }
 }
 
 function resetFunc() {
-  billAmount.value = "0";
+  billAmount.value = "";
   billInputFunc();
-  numberOfPeople.value = "1";
+  numberOfPeople.value = "";
   peopleInputFunc();
   customTip.value = "";
 }
